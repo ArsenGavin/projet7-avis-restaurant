@@ -1,0 +1,70 @@
+[
+   {
+      "id": 1,
+      "restaurantName":"Bronco",
+      "address":"39 Rue des Petites Écuries, 75010 Paris",
+      "lat":48.8737815,
+      "long":2.3501649,
+      "ratings":[
+         {
+            "stars":5,
+            "comment":"Un excellent restaurant, j'y reviendrai ! Par contre il vaut mieux aimer la viande."
+         },
+         {
+            "stars":5,
+            "comment":"Tout simplement mon restaurant préféré !"
+         }
+      ]
+   },
+   {
+      "id": 2,
+      "restaurantName":"Babalou",
+      "address":"4 Rue Lamarck, 75018 Paris",
+      "lat":48.8865035,
+      "long":2.3442197,
+      "ratings":[
+         {
+            "stars":5,
+            "comment":"Une minuscule pizzeria délicieuse cachée juste à côté du Sacré choeur !"
+         },
+         {
+            "stars":3,
+            "comment":"J'ai trouvé ça correct, sans plus"
+         }
+      ]
+   },
+   {
+      "id": 3,
+      "restaurantName":"BurgerKiss",
+      "address":"8 Rue du Fouarre, Paris",
+      "lat":48.8516639,
+      "long":2.3474032,
+      "ratings":[
+         {
+            "stars":5,
+            "comment":"Des burgers a tomber a terre !"
+         },
+         {
+            "stars":3,
+            "comment":"De l'attente et un peu chère mais globalement bon."
+         }
+      ]
+   },
+   {
+     "id": 4,
+      "restaurantName":"Chez Béber",
+      "address":"69 Quai de la Tournelle, Paris",
+      "lat":48.851206,
+      "long":2.3482197,
+      "ratings":[
+         {
+            "stars":5,
+            "comment":"Un vrai restau pépite ! Sans rire, c'était excellent !"
+         },
+         {
+            "stars":4,
+            "comment":"Familliale et conviviale. Nous nous sommes régalé !"
+         }
+      ]
+   }
+]

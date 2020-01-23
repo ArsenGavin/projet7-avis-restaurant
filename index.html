@@ -1,0 +1,109 @@
+<html>
+	<head>
+			<meta charset="utf-8">
+			<title>Avis Restaurant</title>
+			<!-- JQUERY -->
+			<script
+					src="https://code.jquery.com/jquery-3.4.1.min.js"
+					integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+					crossorigin="anonymous"></script>
+		<!-- BOOTSTRAP -->
+			<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<!-- FONT -->
+		<!-- Latest compiled and minified CSS -->
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript bootstrap -->
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<!-- CSS JAVASCRIPT-->
+			<link type="text/css" rel="stylesheet" href="main.css">
+			<link rel="shortcut icon" href="./src/favicon.ico">
+
+
+	</head>
+
+	<body>
+			<div class="menu-navi">
+					<div class="p-style-act btn-marg">
+							<button type="button" id="btn-actu" class="btn btn-dark p-style">Actualiser</button>
+					</div>
+					<p class="p-style"> Filtrer par nombre d'étoiles :</p>
+					<div class="dropdown  p-style-drop btn-marg">
+							<button class="btn btn-secondary dropdown-toggle p-style btn-stars1" type="button" data-toggle="dropdown">
+								★ mini
+							</button>
+							<div id="stars-mini" style="display:none;" value=1></div>
+							<div class="dropdown-menu">
+									<a id="une-etoile-min" class="dropdown-item p-style" value="★ mini" href="#min">★</a>
+									<a id="deux-etoile-min" class="dropdown-item p-style" value="★★ mini" href="#min">★★</a>
+									<a id="trois-etoile-min" class="dropdown-item p-style" value="★★★ mini" href="#min">★★★</a>
+									<a id="quatre-etoile-min" class="dropdown-item p-style" value="★★★★ mini" href="#min">★★★★</a>
+									<a id="cinq-etoile-min" class="dropdown-item p-style" value="★★★★★ mini" href="#min">★★★★★</a>
+							</div>
+					</div>
+					<div class="dropdown  p-style-drop btn-marg">
+							<button class="btn btn-secondary dropdown-toggle p-style btn-stars2" type="button" data-toggle="dropdown">
+								★★★★★ max
+							</button>
+							<div id="stars-max" style="display:none;" value=5 ></div>
+							<div class="dropdown-menu">
+									<a id="une-etoile-max" class="dropdown-item p-style" value=" max" href="#max">★</a>
+									<a id="deux-etoile-max" class="dropdown-item p-style" value="★★ max" href="#max">★★</a>
+									<a id="trois-etoile-max" class="dropdown-item p-style" value="★★★ max" href="#max">★★★</a>
+									<a id="quatre-etoile-max" class="dropdown-item p-style" value="★★★★ max" href="#max">★★★★</a>
+									<a id="cinq-etoile-max" class="dropdown-item p-style" value="★★★★★ max" href="#max">★★★★★</a>
+							</div>
+					</div>
+					<button type="button" id="btn-filtre" class="btn btn-dark p-style">Filtrer</button>
+			</div>
+			<div class="main-tool">
+					<div id="map">
+
+					</div>
+					<div id="search-tool">
+							<img src="./src/logobis.png" alt="" class="logo-img">
+							<div id="places">
+							<p class="info-add">Vous pouvez rajouter un restaurant avec un Click Droit de la souris sur la map et en remplissant le formulaire.</p>
+
+							</div>
+							<div id="add-restau-form" class="container" style="display:none;">
+									<!-- Modal -->
+									<div class="" id="form" role="dialog">
+											<div class="form-content">
+													<div class="form-header" style="text-align:center;">
+															<h4 class="form-title p-style">Merci de votre retour !</h4>
+													</div>
+													<div class="form-body">
+															<p class="p-margin-top p-style">Le nom du restaurant :</p>
+															<input type="text" placeholder="Entrez le nom ici" class="new-restaurant p-style" name="new-restaurant" id="new-restaurant-name" size="50" maxlength="150" />
+															<br/>
+															<p class="p-margin-top p-style">L'adresse du restaurant :</p>
+															<input type="text" placeholder="Entrez l'adresse ici" class="new-restaurant p-style" name="new-restaurant" id="new-restaurant-address" size="50" maxlength="150" />
+													</div>
+													<div class="form-footer">
+															<button type="button" id ="form-send" class="btn btn-dark p-style btn-envoyer-form" data-dismiss="modal">Envoyer</button>
+															<button type="button" id ="form-close" class="btn btn-dark p-style btn-fermer-form" data-dismiss="modal">Fermer</button>
+													</div>
+											</div>
+									</div>
+					</div>
+			</div>
+
+  </body>
+
+  <footer>
+
+  </footer>
+
+		<script type="text/javascript" src="js/restaurantJson.js"></script>
+		<script type="text/javascript" src="js/restaurant.js"></script>
+		<script type="text/javascript" src="js/filtre.js"></script>
+		<script type="text/javascript" src="js/map.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACiT6NwKFG2FY4uHBZI3ZH0Kwqf9eNigM&callback=initMap&libraries=places"
+		async defer></script>
+
+</html>
